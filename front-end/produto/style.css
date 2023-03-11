@@ -21,10 +21,7 @@ body{
 
 .titulo img{
     width: 20px;
-    position: fixed;
-
-    top: 15px;
-    left: 9px;
+    transform: translate(-5px ,-15px);
 }
 
 
