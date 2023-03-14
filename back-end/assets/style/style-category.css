@@ -38,10 +38,49 @@ nav .logo{
     align-items: center;
 }
 
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 20px;
+}
+
+.header .icones{
+    width: 42px;
+    height: 42px;
+    opacity: 0.5;
+}
+
+.header .carrinho img{
+    width: 30px;
+}
+
+.header .carrinho::after{
+    content: var(--quant-car);
+    text-align: center;
+    font-size: 10px;
+
+
+
+    position: absolute;
+
+
+    top: 9px;
+    right: 15px;
+    width: 16px;
+    border-radius: 50%;
+
+    background-color: red;
+    color: white;
+
+
+}
+
 /*===========================================================SEÇÃO1==========*/
 
 section{
-    background-color: rgb(230, 225, 225);
+    /* background-color: rgb(230, 225, 225); */
 
     margin-bottom: 60px;
 }

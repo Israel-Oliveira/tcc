@@ -8,6 +8,8 @@
 
     display: flex;
     justify-content: flex-end;
+
+    z-index: 100;
 }
 
 #areaModal.desativo{
@@ -29,6 +31,6 @@
     align-items: center;
 
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 

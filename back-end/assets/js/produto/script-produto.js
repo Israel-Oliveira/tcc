@@ -7,8 +7,6 @@ var prod = 0
 subtrai.addEventListener("click",()=>{
     if(prod > 0){
         prod = prod - 1
-
-        
     }
     console.log(prod)
 

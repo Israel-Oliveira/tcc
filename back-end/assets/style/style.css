@@ -27,6 +27,8 @@ img{
 
 nav{
     width: 100%;
+
+    border-bottom: 1px solid rgb(165, 165, 165);
 }
 
 nav .logo{
