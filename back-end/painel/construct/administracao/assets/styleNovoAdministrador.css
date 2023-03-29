@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+
+    max-width: 500px;
+    width: 100%;
+
+    gap: 15px;
+}
+
+form .ipText{
+    height: 30px;
+    padding: 5px;
+}
+
+form .btnCriar{
+    max-width: 100px;
+    height: 30px;
+
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form .btnCriar:hover{
+    background-color: darkgreen;
+}
+
+body .btnVoltar{
+    position: fixed;
+    right: 30px;
+    top: 30px;
+
+    text-decoration: none;
+    color: white;
+    background-color: rgb(17, 145, 224);
+
+    padding: 5px 15px;
+}
