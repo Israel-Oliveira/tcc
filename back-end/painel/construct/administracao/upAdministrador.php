@@ -1,3 +1,12 @@
+<?php
+ 
+ include  (__DIR__.'/../../../widgets/Model/dados.php');
+
+  $administradores = new DadosEspecificos;
+  $administradores = $administradores->getDadosEspecificos('administradores',$_GET['id']); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styleNovoAdministrador.css">
-    <title>Novo Administrador</title>
+    <title>Alterar administrador</title>
 </head>
 <body>
 
@@ -16,9 +25,9 @@
 </a>
 
 <form id="formulario" action="">
-    <input class="ipText" type="text" name="nome" id="nome" placeholder="Digite seu nome...">
-    <input class="ipText" type="email" name="email" id="email" placeholder="Digite seu e-mail...">
-    <input class="ipText" type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+    <input class="ipText" type="text" name="nome" id="nome" placeholder="Digite seu nome..." value="<?= $administradores[0]['nome']?>">
+    <input class="ipText" type="email" name="email" id="email" placeholder="Digite seu e-mail..." value="<?= $administradores[0]['email']?>">
+    <input class="ipText" type="password" name="senha" id="senha" placeholder="Digite sua senha..." value="<?= $administradores[0]['senha']?>">
     <input class="ipText" type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha...">
     <button class="btnCriar" type="submit" name="btnEnviar"> ATUALIZAR </button>
 </form>

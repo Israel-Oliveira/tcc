@@ -1,4 +1,12 @@
 
+<?php
+  include  (__DIR__.'/../../../widgets/Model/dados.php');
+
+  $administradores = new Dados;
+  $administradores = $administradores->getDados('administradores'); 
+
+?>
+
 <section id="fundoPainel">
   <a class="btnIncluir" href="./construct/administracao/novoAdministrador.php">
     <h5>Incluir</h5>
@@ -15,20 +23,21 @@
             </tr>
           </thead>
           <tbody>
+            <?php foreach ($administradores as $administradore) { ?>
             <tr>
-              <th scope="row">1</th>
-              <td>teste</td>
-              <td>teste@tste</td>
+              <th scope="row"><?=$administradore['id']?></th>
+              <td><?=$administradore['nome']?></td>
+              <td><?=$administradore['email']?></td>
               <td>
-                <a href="construct/administracao/upAdiministrador.php">
+                <a href="construct/administracao/upAdministrador.php?id=<?=$administradore['id']?>">
                   <img src="./icones/lapis.png" alt="">
                 </a>
               </td>
-              <td><a href="">
+              <td><a href="construct/administracao/deleteAdministrador.php?id=<?=$administradore['id']?>">
               <img src="./icones/lixeira.png" alt="">
               </a></td>
             </tr>
-            
+            <?php } ?>
           </tbody>
         </table>
     </div>

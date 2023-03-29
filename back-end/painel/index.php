@@ -5,7 +5,6 @@
 
     include './construct/headerPainel.php';
 
-   
 ?>
 
 <div id="painel">
