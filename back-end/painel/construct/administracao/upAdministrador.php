@@ -2,7 +2,7 @@
  
  include  (__DIR__.'/../../../widgets/Model/dados.php');
 
-  $administradores = new DadosEspecificos;
+  $administradores = new Dados;
   $administradores = $administradores->getDadosEspecificos('administradores',$_GET['id']); 
 
 ?>
@@ -45,7 +45,6 @@
                 event.preventDefault();
             }else{
                 console.log("As senhas são iguais")
-    
             }
              
         });

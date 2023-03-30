@@ -1,3 +1,34 @@
+<?php
+ 
+ include  (__DIR__.'/../../../widgets/Model/dados.php');
+
+//   $administradores = new Inserir;
+
+  if(isset($_POST['btnEnviar'])){
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha  = $_POST['senha'];
+
+    include (__DIR__.'/../../../widgets/connect.php');
+
+    $sql = ("INSERT INTO administradores (nome, email, senha) VALUES (:nome, :email, :senha)");
+    $stmt = $connPdo ->prepare($sql);  
+
+    $stmt->bindValue(':nome', $nome);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':senha', $senha);
+
+    $stmt->execute();
+    
+
+    header('Location: ../../index.php?tela=administradores');
+  }else{
+    
+  }
+ 
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +46,7 @@
     </h2>
 </a>
 
-<form id="formulario" action="">
+<form id="formulario" action=""  method="post">
     <input class="ipText" type="text" name="nome" id="nome" placeholder="Digite seu nome...">
     <input class="ipText" type="email" name="email" id="email" placeholder="Digite seu e-mail...">
     <input class="ipText" type="password" name="senha" id="senha" placeholder="Digite sua senha...">

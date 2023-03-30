@@ -24,10 +24,6 @@
                 <div class="accordion-body">
                     <div id="opButtom">
                       <form action="" method="GET">
-                          <input type="hidden" name="tela" value="configuracoes">
-                          <button id="buttomOpecoes" type="submit">Configurações</button>
-                      </form>
-                      <form action="" method="GET">
                           <input type="hidden" name="tela" value="administradores">
                           <button id="buttomOpecoes" type="submit">Administradores</button>
                       </form>
