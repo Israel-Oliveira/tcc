@@ -1,9 +1,5 @@
 <?php
  
- include  (__DIR__.'/../../../widgets/Model/dados.php');
-
-//   $administradores = new Inserir;
-
   if(isset($_POST['btnEnviar'])){
     $nome = $_POST['nome'];
     $email = $_POST['email'];

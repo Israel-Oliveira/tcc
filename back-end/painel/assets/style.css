@@ -32,14 +32,14 @@ form{
 }
 
 #painel #opPainel{
-    background-color: red;
+    /* background-color: red; */
     
     max-width: 400px;
     width: 100%;
 }
 
 #painel #tlPainel{
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
 }
 
@@ -57,6 +57,13 @@ form{
     background-color: white;
 }
 
+#tlPainel{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-top: 50px;
+}
 
 
 .accordion-body{
@@ -118,4 +125,46 @@ form{
 
 td a img{
     width: 25px;
+}
+
+
+/*========FORM CONFIG ===============*/
+
+#formConfig{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 800px;
+    width: 100%;
+}
+
+#formConfig #btnEnviar{
+    background-color: green;
+    color: white;
+
+    border: none;
+    transition: all 700ms;
+
+    width: 200px;
+    height: 40px;
+}
+
+#formConfig #btnEnviar:hover{
+    background-color: lime;
+
+    
+}
+
+#formConfig .labelInput{
+    display: flex;
+}
+
+#formConfig .labelInput input{
+    width: 70%;
+
+}
+
+#formConfig .labelInput label{
+    width: 28%;
+
 }

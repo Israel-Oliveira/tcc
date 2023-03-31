@@ -45,5 +45,6 @@
                 throw new Exception("Nenhum usuário encontrado");
             }
         }
+
     }
 
